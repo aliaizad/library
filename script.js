@@ -18,31 +18,13 @@ Book.prototype = {
 //set up an empty library
 let myLibrary = [];
 //user inputs their book details
+const form  = document.querySelector('form');
+form.addEventListener('submit', callbackFn);
+const title = document.getElementById('title');
+function callbackFn(e) {
+    e.preventDefault();
+    console.log(title.value);
+}
 //a book object is created,
 //the book is pushed into the array.
-function addBook () {
-    // const title = prompt('What is the title of your book?');
-    // const author = prompt('Who is the author of this book?');
-    // const pages = prompt('How many pages does this book have?');
-    // let readStatus = prompt('Have you read this book?');
-    const title = 'Communist Manifesto'
-    const author = 'Karl Marx'
-    const pages = '699'
-    let readStatus = false;
-    // if (readStatus.toLowerCase === 'yes') {
-    //     readStatus = true;
-    // } else {
-    //     readStatus = false;
-    // }
-    const book = new Book (title, author, pages, readStatus);
-    myLibrary.push(book);
-}
 
-const cardCon = document.getElementById('card-con');
-//create a div in card-con
-//print out the results in the div
-//iterate next book
-for (const book of myLibrary) {
-    const card = document.createElement('div');
-    console.log(book);
-}
