@@ -6,38 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&display=swap" rel="stylesheet">
     <script src="script.js" defer></script>
 </head>
 <body>
     <div id="header">
+        <div id="logo">Library</div>
+        <div id="git-logo">GitHub</div>
     </div>
-    <div id="side-bar">
-        <button id="openform">Add Book</button>
-        <form action="index.html" class="close">
-            <div>
-                <label for="title">Title</label>
-                <input type="text" name="title" id="title" required>
-            </div>
-            <div>
-                <label for="author">Author</label>
-                <input type="text" name="author" id="author" required>
-            </div>
-            <div>
-                <label for="pages">Total Pages</label>
-                <input type="number" name="pages" id="pages" required>
-            </div>
-            <div>
-                <label for="readstatus">Have you read this book?</label>
-                <label for="yes">Yes</label>
-                <input type="radio" name="readstatus" id="yes">
-                <label for="no">No</label>
-                <input type="radio" name="readstatus" id="no">
-            </div>
-            <button type="submit" id="add">Confirm</button>
-            <button type="button" id="close">Close Form</button>
-        </form>
-    </div>
-    <div id="card-con">
+    <div id="content-con">
+        <div id="side-bar">
+            <button id="openform">Add Book</button>
+            <form action="index.html" class="close">
+                <div>
+                    <label for="title">Title</label>
+                    <input type="text" name="title" id="title" required>
+                </div>
+                <div>
+                    <label for="author">Author</label>
+                    <input type="text" name="author" id="author" required>
+                </div>
+                <div>
+                    <label for="pages">Total Pages</label>
+                    <input type="number" name="pages" id="pages" required>
+                </div>
+                <div>
+                    <label for="readstatus">Have you read this book?</label>
+                    <label for="yes">Yes</label>
+                    <input type="radio" name="readstatus" id="yes">
+                    <label for="no">No</label>
+                    <input type="radio" name="readstatus" id="no">
+                </div>
+                <button type="submit" id="add">Confirm</button>
+                <button type="button" id="close">Close Form</button>
+            </form>
+        </div>
+        <div id="card-con">
+        </div>
     </div>
     <div id="footer">
     </div>

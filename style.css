@@ -1,4 +1,24 @@
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    font-family: 'EB Garamond', serif;
+    /* color: #6A8D92; */
+    color: #4D4730;
+}
 
+#header {
+    background-color: #F2E7C9;
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+#logo {
+    font-size: 40px;
+    font-weight: 600;
+}
 .close {
     display: none;
 }
