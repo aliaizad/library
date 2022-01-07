@@ -17,36 +17,41 @@
         <div id="git-logo">GitHub</div>
     </div>
     <div id="content-con">
-        <div id="side-bar">
-            <button id="openform">Add Book</button>
-            <form action="index.html" class="close">
-                <div>
-                    <label for="title">Title</label>
-                    <input type="text" name="title" id="title" required>
-                </div>
-                <div>
-                    <label for="author">Author</label>
-                    <input type="text" name="author" id="author" required>
-                </div>
-                <div>
-                    <label for="pages">Total Pages</label>
-                    <input type="number" name="pages" id="pages" required>
-                </div>
-                <div>
-                    <label for="readstatus">Have you read this book?</label>
-                    <label for="yes">Yes</label>
-                    <input type="radio" name="readstatus" id="yes">
-                    <label for="no">No</label>
-                    <input type="radio" name="readstatus" id="no">
-                </div>
-                <button type="submit" id="add">Confirm</button>
-                <button type="button" id="close">Close Form</button>
-            </form>
+        <div id="side-bar-con">
+            <div>
+                <button id="openform">Add Book</button>
+            </div>
+            <div class="close" id="form-div">
+                <form action="index.html" class="close">
+                    <div>
+                        <label for="title">Title</label>
+                        <input type="text" name="title" id="title" required>
+                    </div>
+                    <div>
+                        <label for="author">Author</label>
+                        <input type="text" name="author" id="author" required>
+                    </div>
+                    <div>
+                        <label for="pages">Total Pages</label>
+                        <input type="number" name="pages" id="pages" required>
+                    </div>
+                    <div>
+                        <label for="readstatus">Have you read this book?</label>
+                        <label for="yes">Yes</label>
+                        <input type="radio" name="readstatus" id="yes">
+                        <label for="no">No</label>
+                        <input type="radio" name="readstatus" id="no">
+                    </div>
+                    <button type="submit" id="add">Confirm</button>
+                    <button type="button" id="close">Close Form</button>
+                </form>
+            </div>
         </div>
         <div id="card-con">
         </div>
     </div>
     <div id="footer">
+        Copyright &copy; Ali Aizad 2021
     </div>
 </body>
 </html>

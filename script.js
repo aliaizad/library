@@ -41,9 +41,12 @@ function createAndAddBook (e) {
 //add a button that opens the form
 const open = document.getElementById('openform');
 open.addEventListener('click', openForm);
+const formDiv = document.querySelector('#form-div');
 
 function openForm() {
-    if (form.classList.contains('close')) {
+    if (formDiv.classList.contains('close')) {
+        formDiv.classList.remove('close');
+        formDiv.classList.add('form');
         form.classList.remove('close');
     }
 }
@@ -54,6 +57,7 @@ close.addEventListener('click', closeForm);
 
 function closeForm() {
     form.classList.add('close');
+    formDiv.classList.add('close');
 }
 
 const cardCon = document.getElementById('card-con');
