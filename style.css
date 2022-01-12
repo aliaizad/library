@@ -13,20 +13,15 @@ body {
     box-sizing: border-box;
     height: 70px;
     display: flex;
-    align-items: center;
+    align-items: baseline;
     justify-content: space-around;
     gap: 500px;
+    padding: 15px 0;
 }
 
 #logo {
     font-size: 40px;
     font-weight: 600;
-}
-
-#git-logo {
-    font-size: 20px;
-    font-weight: 600;
-    margin-top: 5px;
 }
 
 #footer {
@@ -44,6 +39,8 @@ body {
     flex: 1;
     display: flex;
     background-color: #F2E7C9;
+    padding: 30px 0;
+    gap: 20px;
 }
 
 #side-bar-con {
@@ -51,17 +48,13 @@ body {
     flex-direction: column;
     margin-left: 170px;
     min-width: 100px;
-    background-color: blueviolet;
-    justify-content: space-between;
+    gap: 10px;
 }
 
 .form {
     box-sizing: border-box;
-    background-color: aqua;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
     border: 3px solid #4D4730;
     background-color: #F2E7C9;
     min-width: 180px;
@@ -71,18 +64,17 @@ body {
 #openform {
     font-size: 20px;
     font-family: 'EB Garamond';
-    padding: 10px 100px;
+    padding: 10px 130px;
     background-color: #F2E7C9;
     color: #4D4730;
     border: 3px solid #4D4730;
     transition-duration: 0.2s;
 }
 
-#openform:hover {
+#openform:hover, #add:hover, #close:hover, .button:hover {
     background-color: #4D4730;
     color: #F2E7C9;
 }
-
 
 .close {
     display: none;
@@ -90,4 +82,70 @@ body {
 
 .open {
     display: block;
+}
+
+#form-button {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    flex: 1;
+    font-size: 18px;
+}
+
+#add, #close {
+    font-size: 18px;
+    font-family: 'EB Garamond';
+    padding: 5px 65px;
+    background-color: #F2E7C9;
+    color: #4D4730;
+    border: 3px solid #4D4730;
+    transition-duration: 0.2s;
+}
+
+.cards {
+    border: 3px solid #4D4730;
+    display: flex;
+    height: max-content;
+    padding: 15px;
+    font-size: 18px;
+    min-width: 625px;
+    justify-content: space-between;
+}
+
+#card-con {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.buttoncon {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.button {
+    box-sizing: border-box;
+    width: max-content;
+    background-color: #F2E7C9;
+    color: #4D4730;
+    border: 1px solid #4D4730;
+    transition-duration: 0.1s;
+    font-family: 'EB Garamond';
+    font-size: 14px;
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    font-size: 23px;
+    font-weight: 600;
+    color: #4D4730;
 }

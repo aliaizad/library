@@ -68,27 +68,37 @@ function showBook () {
     }
 
     for (const book of myLibrary) {
+        const bookcon = document.createElement('div');
         const card = document.createElement('div')
         card.setAttribute('style', 'white-space: pre;');
         if (book.readStatus) {
-            card.textContent = `${book.title}\r\nAuthor: ${book.author}\r\nTotal pages: ${book.pages}\r\nStatus: Read`
+            card.textContent = `${book.title} by ${book.author}\r\n${book.pages} pages\r\nBook read`
         } else {
-            card.textContent = `${book.title}\r\nAuthor: ${book.author}\r\nTotal pages: ${book.pages}\r\nStatus: Unread`
+            card.textContent = `${book.title} by ${book.author}\r\n${book.pages} pages\r\nBook unread`
         }
         const index = myLibrary.indexOf(book);
         //add remove button
         const remove = document.createElement('button');
         remove.setAttribute('class', index);
-        remove.textContent = 'Remove Book';
+        remove.textContent = 'x';
         remove.addEventListener('click', removeObject);
+        remove.classList.add('button');
         //add read toggle button;
         const toggle = document.createElement('button');
         toggle.setAttribute('class', index);
-        toggle.textContent = 'Change Read Status';
+        toggle.textContent = 'Change Status';
         toggle.addEventListener('click', toggleStatus);
-        card.appendChild(toggle);
-        card.appendChild(remove);
-        cardCon.appendChild(card);
+        toggle.classList.add('button')
+        //create a container for the buttons
+        const buttoncon = document.createElement('div');
+        buttoncon.appendChild(remove);
+        buttoncon.appendChild(toggle);
+        buttoncon.classList.add('buttoncon');
+        //add a css class to div;
+        bookcon.appendChild(card);
+        bookcon.appendChild(buttoncon);
+        bookcon.classList.add('cards');
+        cardCon.appendChild(bookcon);
     }
 }
 
@@ -96,13 +106,14 @@ function showBook () {
 //the object associated with the button will be removed from the array;
 //the showbook function will run again;
 function removeObject(e) {
-    const index = +e.target.className;
+    const index = +e.target.classList[0];
+    console.log(index);
     myLibrary.splice(index, 1);
     showBook();
 }
 
 function toggleStatus(e) {
-    const index = +e.target.className;
+    const index = +e.target.classList[0];
     const status = myLibrary[index].readStatus;
     if (status) {
         myLibrary[index].readStatus = false;
